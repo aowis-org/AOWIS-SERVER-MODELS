@@ -1,2 +1,3 @@
 # AOWIS-SERVER
-The main RESTful Server for the AOWIS Infrastructure.
+Server for the AOWIS Controller Infrastructure that performs the network monitoring and automatisation.
+
