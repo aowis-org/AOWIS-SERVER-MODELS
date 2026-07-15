@@ -13,6 +13,14 @@ add_library(aowis-server-model INTERFACE)
 add_library(AOWIS::ServerModel ALIAS aowis-server-model)
 add_library(AOWIS::Model ALIAS aowis-server-model)
 
+target_sources(
+    aowis-server-model
+    PRIVATE
+        include/aowis/model/hydraulic/epanet_status.h
+        include/aowis/model/hydraulic/simulation_request.h
+        include/aowis/model/hydraulic/simulation_result.h
+)
+
 target_link_libraries(
     aowis-server-model
     INTERFACE
