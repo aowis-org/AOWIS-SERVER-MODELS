@@ -1,3 +1,3 @@
-# AOWIS-SERVER-MODELS
-Data structures for AOWIS
+# AOWIS-SERVER-MODEL
+Data structures for AOWIS.
 
