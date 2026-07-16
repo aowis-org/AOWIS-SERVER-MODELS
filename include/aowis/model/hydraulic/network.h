@@ -1,8 +1,10 @@
-#ifndef SIMULATION_REQUEST_H
-#define SIMULATION_REQUEST_H
+#ifndef NETWORK_HYDRAULIC_H
+#define NETWORK_HYDRAULIC_H
 
 #include <QString>
 #include <QList>
+
+#include <QUuid>
 
 
 enum class TankElevationInputType
@@ -25,11 +27,13 @@ struct TankVolumeCurvePoint
 struct TankVolumeCurve
 {
     QString id;
+    QUuid uuid;
     QList<TankVolumeCurvePoint> points;
 };
 struct Tank
 {
     QString id;
+    QUuid uuid;
     
     TankElevationInputType elevation_input_type = TankElevationInputType::BottomElevation;
     
@@ -68,12 +72,14 @@ struct Tank
 struct Reservoir
 {
     QString id;
+    QUuid uuid;
     double head_m;
 };
 
 struct Junction
 {
     QString id;
+    QUuid uuid;
     double elevation_m;
     double demand_lps;
 };
@@ -81,6 +87,7 @@ struct Junction
 struct Pipe
 {
     QString id;
+    QUuid uuid;
     QString node_id_from;
     QString node_id_to;
     double length_m;
@@ -90,17 +97,20 @@ struct Pipe
     bool open;
 };
 
-struct SimulationRequest
+struct NetworkHydraulic
 {
+    QUuid uuid;
+    
     long duration_s = 0;
     long hydraulic_timestep_s = 3600;
     
     QList<Reservoir> reservoirs;
     QList<Junction> junctions;
-    QList<Pipe> pipes;
     
     QList<Tank> tanks;
     QList<TankVolumeCurve> tank_volume_curves;
+    
+    QList<Pipe> pipes;
 };
 
-#endif // SIMULATION_REQUEST_H
+#endif // NETWORK_HYDRAULIC_H

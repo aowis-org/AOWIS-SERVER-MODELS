@@ -17,8 +17,10 @@ target_sources(
     aowis-server-model
     PRIVATE
         include/aowis/model/project.h
+        include/aowis/model/revision.h
+        include/aowis/model/hydraulic/network.h
         include/aowis/model/hydraulic/epanet_status.h
-        include/aowis/model/hydraulic/simulation_request.h
+        #include/aowis/model/hydraulic/simulation_request.h
         include/aowis/model/hydraulic/simulation_result.h
 )
 
