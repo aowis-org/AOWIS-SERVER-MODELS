@@ -35,6 +35,9 @@ struct Tank
     QString id;
     QUuid uuid;
     
+    double latitude;
+    double longitude;
+    
     TankElevationInputType elevation_input_type = TankElevationInputType::BottomElevation;
     
     double bottom_elevation_m = 0.0;
@@ -73,6 +76,10 @@ struct Reservoir
 {
     QString id;
     QUuid uuid;
+    
+    double latitude;
+    double longitude;
+    
     double head_m;
 };
 
@@ -80,6 +87,10 @@ struct Junction
 {
     QString id;
     QUuid uuid;
+    
+    double latitude;
+    double longitude;
+    
     double elevation_m;
     double demand_lps;
 };
@@ -88,6 +99,10 @@ struct Pipe
 {
     QString id;
     QUuid uuid;
+    
+    double latitude;
+    double longitude;
+    
     QString node_id_from;
     QString node_id_to;
     double length_m;
