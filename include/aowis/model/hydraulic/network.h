@@ -112,6 +112,24 @@ struct Pipe
     bool open;
 };
 
+struct Pump
+{
+    QString id;
+    QUuid uuid;
+};
+
+struct Valve
+{
+    QString id;
+    QUuid uuid;
+};
+
+struct CustomerPoint
+{
+    QString id;
+    QUuid uuid;
+};
+
 struct NetworkHydraulic
 {
     QUuid uuid;
@@ -126,6 +144,10 @@ struct NetworkHydraulic
     QList<TankVolumeCurve> tank_volume_curves;
     
     QList<Pipe> pipes;
+    QList<Pump> pumps;
+    QList<Valve> valves;
+    
+    QList<CustomerPoint> customer_points;
 };
 
 #endif // NETWORK_HYDRAULIC_H
