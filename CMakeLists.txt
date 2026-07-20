@@ -16,6 +16,7 @@ add_library(AOWIS::Model ALIAS aowis-server-model)
 target_sources(
     aowis-server-model
     PRIVATE
+        include/aowis/model/gis.h
         include/aowis/model/project.h
         include/aowis/model/revision.h
         include/aowis/model/hydraulic/network.h
