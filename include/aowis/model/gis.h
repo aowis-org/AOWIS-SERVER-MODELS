@@ -10,6 +10,12 @@ struct CoordinateWGS84
     std::optional<double> altitude_m;
 };
 
+struct CoordinateWGS84Rect
+{
+    CoordinateWGS84 north_west;
+    CoordinateWGS84 south_east;
+};
+
 struct CoordinateUTM
 {
     double easting = 0.0;
