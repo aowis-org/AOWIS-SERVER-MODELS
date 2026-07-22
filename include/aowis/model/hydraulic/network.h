@@ -102,7 +102,10 @@ struct Pipe
     
     QString node_id_from;
     QString node_id_to;
-    double length_m;
+    
+    double length_calculated_m;
+    std::optional<double> length_measured_m;
+    
     double diameter_mm;
     double roughness_hw;
     double minor_loss;
