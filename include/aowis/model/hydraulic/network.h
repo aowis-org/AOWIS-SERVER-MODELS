@@ -100,9 +100,6 @@ struct Pipe
     QString id;
     QUuid uuid;
     
-    double latitude;
-    double longitude;
-    
     QString node_id_from;
     QString node_id_to;
     double length_m;
